@@ -6,27 +6,22 @@ Ext.define("Verizon.controller.LoginController",{
 	refs:[
 	      {ref:"userName",  selector:"#name"},
 	      {ref:"passWord", selector:"#pass"}
-	      ],
-	      /*[
-       	{ref:"userName",selector:"loginpanel textfield[id=usernametext]"},
-       	{ref:"password",selector:"loginpanel textfield[id=passwordtext]"},
-       	{ref:"loginButton",selector:"loginpanel button[text=Submit]"}
-      ],*/
+	      ],     
 
 	init:function(){
-		this.control({
-			"#login":{
-			click:this.clicked
-			}
-		});
+		console.log('Initialized Users! This happens before the Application launch function is called');
+		 this.control({
+	            'viewport > panel': {
+	                //render: this.clicked
+	            },
+	            'loginpanel button': {
+	            	click: this.clicked
+	            	
+	            }
+	        });
 	},
 	clicked:function(){
-		/*this.application.viewport.add({xtype:"homepanel",id:"homepanel",height:600,width:600});
-		this.application.viewport.getLayout().setActiveItem("homepanel");
-
-		alert(this.getUserName().getValue());
-		alert(this.getPassWord().getValue());*/
-		
-		alert('Hi');
+		console.log("panel render");
+		window.open("http://www.w3schools.com");
 	}
 });
