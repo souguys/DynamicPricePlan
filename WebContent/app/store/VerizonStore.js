@@ -1,6 +1,5 @@
-Ext.define('Verizon.store.NorthStore', {
+Ext.define('Verizon.store.VerizonStore', {
 	extend: 'Ext.data.JsonStore',
-	xtype: 'northstore',
     fields: ['name', 'data'],
     data: [
         { 'name': 'S',   'data':25 },

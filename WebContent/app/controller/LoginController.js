@@ -22,6 +22,6 @@ Ext.define("Verizon.controller.LoginController",{
 	},
 	clicked:function(){
 		console.log("panel renderss");
-		window.open("http://www.w3schools.com");
+		window.open("Graph.html","_self");
 	}
 });
