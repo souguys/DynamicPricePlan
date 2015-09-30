@@ -46,6 +46,7 @@
 							<!-- the list has a default value of ** -->
 							<includes>
 								<include>**/*.html</include>
+								<include>**/*.js</include>
 							</includes>
 						</resource>
 					</webResources>
