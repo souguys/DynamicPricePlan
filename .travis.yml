@@ -7,6 +7,5 @@ notifications:
     recipients:
       - jegadeesh.t.kannan@verizon.com
       - Srinivas.Masilamani@one.verizon.com
-    on_success: always
-    on_failure: [always|never|change] # default: always
+
 
