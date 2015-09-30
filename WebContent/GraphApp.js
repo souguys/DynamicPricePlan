@@ -12,10 +12,10 @@ Ext.application({
 			layout: 'border',
 			items: [
 			 {
-			  xtype: 'toolbar',
+			  xtype: 'panel',
 			  region: 'north',
-			  height: 30,
-			   html: 'toolbar'
+			  height: 70,
+			  html: '<img align="left" src="images/verizonlogo.jpeg" alt="Verizon" height="70" width="150"><font size="10" face="verdana" color="black"><b><center>Verizon Price Plan Automation</center></b></font>',
 			  },
 			  {
 
@@ -53,8 +53,8 @@ Ext.application({
 			  {
 			   xtype: 'panel',
 			   region: 'south',
-			   html: 'Southern region',
-			   height: 30
+			   html: '<body bgcolor="#E6E6FA"><font size="4" face="verdana" color="black"><b>Verizon Copy Right</b></font><img align="right" src="images/verizonlogo.jpeg" alt="Verizon" height="50" width="150"></body>',
+			   height: 50
 			  }
 
 			 ]
