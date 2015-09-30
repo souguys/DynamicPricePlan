@@ -45,8 +45,7 @@
 							<directory>WebContent</directory>
 							<!-- the list has a default value of ** -->
 							<includes>
-								<include>**/*.html</include>
-								<include>**/*.js</include>
+								<include>**/*.*</include>
 							</includes>
 						</resource>
 					</webResources>
