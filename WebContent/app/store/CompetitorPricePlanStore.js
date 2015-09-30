@@ -8,8 +8,8 @@ Ext.define('Verizon.store.CompetitorPricePlanStore', {
                 type: 'json',
                 root: 'data'
             }
-        }/*
-        data: [
+        }
+        /*data: [
                { 'name': 'S', 'data1':25 ,'data2':30 },
                { 'name': 'M', 'data1':40,'data2':45 },
                { 'name': 'L', 'data1':60,'data2':65 },

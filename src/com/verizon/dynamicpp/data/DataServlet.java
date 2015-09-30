@@ -37,6 +37,9 @@ public class DataServlet extends HttpServlet {
 			System.out.println("Competitor Data");
 			response.getWriter().append(getJson.getCompetitorData());
 		}
+		if("newMarketData".equalsIgnoreCase(request.getParameter("dataType"))){
+			response.getWriter().append(getJson.getMarketDataAsObject());
+		}
 	}
 
 	/**

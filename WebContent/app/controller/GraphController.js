@@ -9,6 +9,9 @@ Ext.define("Verizon.controller.GraphController",{
 	},{
 		ref: 'competitorChart',
 		selector: 'competitorchart'
+	},{
+		ref: 'comparePricePlanChart',
+		selector:'comparepriceplanchart'
 	}],
 	init:function(){
 		console.log('Graph Users!');
@@ -24,6 +27,9 @@ Ext.define("Verizon.controller.GraphController",{
 	            },
 	            'competitorchart': {
 	            	beforerender: this.renderCompetitorChart
+	            },
+	            'comparepriceplanchart':{
+	            	beforerender: this.renderProposedChart
 	            }
 	        });
 	},
@@ -54,9 +60,32 @@ Ext.define("Verizon.controller.GraphController",{
 	
 	executePlanChange: function(){
 		alert('Execute Plan change');
-		var verizonStore = this.getVerizonChart().getStore();
-		console.log(verizonStore);
 		var widget = Ext.widget("comparepriceplancontainer");
-		
+	},
+	renderProposedChart: function(){
+		var me = this;
+		var verizonStore = this.getComparePricePlanChart().getStore();
+		console.log(verizonStore);
+		verizonStore.load({
+			   params:{"dataType": "newMarketData"},
+			   callback: function(records, operation, success) {
+				   me.getCompetitorChart().redraw();
+			    }
+		});
+		/*Ext.Ajax.request({
+			url: 'DataServlet',
+		    params: {
+		    	"dataType": "newMarketData"
+		    },
+		    success: function(response){
+		    	console.log('response',response);
+		        var text = response.responseText;
+		    	var resObj=Ext.JSON.decode(text);
+		        console.log(text);
+		        verizonStore.load(resObj.proposedList);
+		        //me.getComparePricePlanChart().redraw();
+		        //console.log(obj1);
+		    }
+		});*/
 	}
 });

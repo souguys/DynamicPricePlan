@@ -1,5 +1,9 @@
 package com.verizon.dynamicpp.data;
 
+import java.util.List;
+
+
+
 public class CompetitorPricePlanObject {
 	String plansize;
 	String att;
@@ -29,6 +33,14 @@ public class CompetitorPricePlanObject {
 	public void setTmobile(String tmobile) {
 		this.tmobile = tmobile;
 	}
+	List<CompetitorPricePlanObject> list;
 
+	public List<CompetitorPricePlanObject> getList() {
+		return list;
+	}
+
+	public void setList(List<CompetitorPricePlanObject> list) {
+		this.list = list;
+	}
 	
 }
