@@ -6,7 +6,7 @@
   <servers>
 	<server>
 	  <id>cloud-foundry-credentials</id>
-	  <username>jegadeeshtk@yahoo.com</username>
+	  <username>jegadeesh.t.kannan@verizon.com</username>
 	  <password>Jegan!23</password>
 	  <filePermissions>664</filePermissions>
 	  <directoryPermissions>775</directoryPermissions>
