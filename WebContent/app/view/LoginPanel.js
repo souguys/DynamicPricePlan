@@ -1,28 +1,27 @@
-Ext.define("Verizon.view.LoginPanel",{
+Ext.define('Verizon.view.LoginPanel', {
 	extend:"Ext.panel.Panel",
 	xtype:"loginpanel",
-	title:"Login",
-	height:500,width:500,
-	pack:'center',
-	items:[
+	title: 'Price Plan',
+    height: 200,
+    width: 400,
+    items:[
 	       {
-	    	   xtype : "textfield",
-	    	   fieldLabel:"UserName",
-	    	   id:"name"
-	    		   
+	    	   xtype: 'textfield',
+	    	   fieldLabel: 'User Name',	    	   
+	    	   id: 'username'
 	       },
 	       {
-	    	   xtype : "textfield",
-	    	   fieldLabel:"Password",
-	    	   id:"pass"
+	    	   
+	    	   xtype:'textfield',
+	    	   fieldLabel: 'Password',
+	    	   id: 'password'
 	       },
 	       {
-	    	   xtype : "button",
-	    	   text:"Login",
-	    	   id:"login"
+	    	   xtype: 'button',
+	    	   text:'Submit',
+	    	   id: 'login'
+	    	   
 	       }
 	       
-	       ]
-
-	
+	]
 });
