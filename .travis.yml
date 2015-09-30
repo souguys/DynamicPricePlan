@@ -2,3 +2,11 @@ language: java
 jdk:
   - oraclejdk8
 script: mvn clean package --settings settings.xml cf:push
+notifications:
+  email:
+    recipients:
+      - jegadeesh.t.kannan@verizon.com
+      - Srinivas.Masilamani@one.verizon.com
+    on_success: always
+    on_failure: [always|never|change] # default: always
+
