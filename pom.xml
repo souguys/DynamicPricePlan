@@ -61,7 +61,7 @@
 					<target>http://api.run.pivotal.io</target>
 					<space>development</space>
 					<appname>DynamicPricePlan</appname>
-					<url>DynamicPricePlan.cfapps.io</url>
+					<url>dynamicpriceplan.cfapps.io</url>
 					<memory>512</memory>
 					<instances>2</instances>
 				</configuration>
