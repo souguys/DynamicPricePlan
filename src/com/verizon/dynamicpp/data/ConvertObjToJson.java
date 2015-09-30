@@ -53,7 +53,7 @@ public class ConvertObjToJson {
 				}
 			}
 		}
-		return "data:{"+gson.toJson(list)+"}";
+		return "{data:"+gson.toJson(list)+"}";
 	}
 	
 	public String getCompetitorData() {
@@ -107,7 +107,7 @@ public class ConvertObjToJson {
 				}
 			}
 		}
-		return "data:{"+gson.toJson(list)+"}";
+		return "{data:"+gson.toJson(list)+"}";
 	}
 
 

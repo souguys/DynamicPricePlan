@@ -21,12 +21,39 @@ Ext.application({
 
 			   xtype: 'panel',
 			   region: 'west',
-			   html: 'Western Region',
 			   width: 250,
 			   title: 'Western Region',
 			   collapseDirection: 'left',
 			   collapsible: true,
-			   split: true
+			   split: true,
+			   items: [
+			           {
+			        	   
+			        	   xtype:'container',
+			        	   height: 10
+			           },
+			          {
+			        	  xtype: 'container',
+			        	  height: 40,
+			        	  layout: 'hbox',
+			        	  items: [
+			        	         {
+			        	        	 xtype: 'container',
+			        	        	 width: 20
+			        	         },
+			        	         {
+			        	        	 xtype: 'button',
+			        	        	 action: 'triggerplanchange',
+			        	        	 flex: .5,
+			        	        	 text: 'trigger plan change'
+			        	         },
+			        	         {
+			        	        	 xtype: 'container',
+			        	        	 flex: .25
+			        	         }
+			        	        ]
+			          }
+			        ]
 
 			  },
 
@@ -35,7 +62,6 @@ Ext.application({
 			   xtype: 'panel',
 			   itemId: 'centerregion',
 			   region: 'center',
-			   html: 'Center region',
 			   pack : 'center',
 			   layout : 'vbox',
 			   items : [

@@ -28,7 +28,15 @@ public class DataServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		ConvertObjToJson getJson = new ConvertObjToJson();
-		response.getWriter().append("Served at: ").append(getJson.getVerizonCurrentData());
+		System.out.println(request.getParameter("dataType"));
+		if("verizoncurrentdata".equalsIgnoreCase(request.getParameter("dataType"))){
+			System.out.println("%%%%%%%%%%%%%%");
+			response.getWriter().append(getJson.getVerizonCurrentData());
+		}
+		if("competitordata".equalsIgnoreCase(request.getParameter("dataType"))){
+			System.out.println("Competitor Data");
+			response.getWriter().append(getJson.getCompetitorData());
+		}
 	}
 
 	/**
