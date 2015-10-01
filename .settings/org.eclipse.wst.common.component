@@ -2,6 +2,7 @@
     <wb-module deploy-name="DynamicPricePlan">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/test"/>
         <property name="context-root" value="DynamicPricePlan"/>
         <property name="java-output-path" value="/DynamicPricePlan/build/classes"/>
     </wb-module>
