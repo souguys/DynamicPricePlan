@@ -124,7 +124,7 @@ Ext.define("Verizon.controller.GraphController",{
 	},
 	showStoreGraph: function(){
 		var widget = Ext.widget("verizonstorechartcontainer");
-		alert(this.getVerizonChart().getStore().data);
+		//alert(this.getVerizonChart().getStore().data);
 		//this.getVerizonStoreChart().getStore().loadRawData(this.getVerizonChart().getStore().data);
 	}
 });
