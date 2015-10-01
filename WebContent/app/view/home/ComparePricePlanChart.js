@@ -17,18 +17,24 @@
                 renderer: Ext.util.Format.numberRenderer('0,0')
             },
             grid: true,
-            title: 'Number of Hits'
+            title: 'Plan Price'
         }, {
             type: 'Category',
             position: 'left',
             fields: ['name'],
-            title: 'Month of the Year'
+            title: 'Plan Size'
         }],
         series: [{
             type: 'bar',
             axis: 'bottom',
             xField: 'name',
             yField: ['data1', 'data2'],
-            title: ['Current','Proposed']
+            title: ['Current','Proposed'],
+            tips: {
+                trackMouse: true,
+                renderer: function(storeItem, item) {
+                    this.setTitle('$'+ String(item.value[1]));
+                }
+            }
         }]
     });

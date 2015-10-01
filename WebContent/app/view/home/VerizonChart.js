@@ -3,7 +3,7 @@ Ext.define('Verizon.view.home.VerizonChart', {
 	xtype: "verizonchart",
     renderTo: Ext.getBody(),
     width: 500,
-    height: 300,
+    height: 225,
     animate: true,
     store: "VerizonStore",
     axes: [

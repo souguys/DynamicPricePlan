@@ -2,7 +2,7 @@ Ext.define('Verizon.view.home.CompetitorChart', {
 		extend: 'Ext.chart.Chart',
 		xtype: 'competitorchart',
 		 width: 500,
-		 height: 300,
+		 height: 275,
         animate: true,
         shadow: true,
         store: 'CompetitorStore',
@@ -32,6 +32,7 @@ Ext.define('Verizon.view.home.CompetitorChart', {
             gutter: 80,
             xField: 'plansize',
             yField: ['att', 'sprint', 'tmobile'],
+            title: ['AT&T', 'Sprint','T-Mobile'],
             stacked: true,
             tips: {
                 trackMouse: true,

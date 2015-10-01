@@ -20,9 +20,9 @@ Ext.application({
 			  {
 
 			   xtype: 'panel',
-			   region: 'west',
+			   region: 'west', 
 			   width: 250,
-			   title: 'Western Region',
+			   title: 'Automation Dashboard',
 			   collapseDirection: 'left',
 			   collapsible: true,
 			   split: true,
@@ -45,7 +45,8 @@ Ext.application({
 			        	        	 xtype: 'button',
 			        	        	 action: 'triggerplanchange',
 			        	        	 flex: .5,
-			        	        	 text: 'trigger plan change'
+			        	        	 width: 50,
+			        	        	 text: '<b>Trigger Plan Change</b>'
 			        	         },
 			        	         {
 			        	        	 xtype: 'container',
@@ -66,20 +67,54 @@ Ext.application({
 			   layout : 'vbox',
 			   items : [
 			            {
-			            	xtype: 'verizonchart',
-			            	flex: 1
+							xtype:'container',
+							layout:'hbox',
+							items:[
+								{
+									xtype: 'verizonchart',
+									flex: 1
+								},
+								{
+									xtype:'label',
+									margin: '100 0 0 50',
+									html: '<font size="5" face="verdana" color="black"><b>Verizon Current Pricing</b></font>',
+									flex : 1
+								}
+							]
+			            },
+			            { 
+			            	xtype: 'tbspacer',
+			            	border: 2,
+			            	style: {
+			            	    borderColor: 'black',
+			            	    borderStyle: 'solid'
+			            	},
+			            	width: 1000 
 			            },
 			            {
-			            	xtype: 'competitorchart',
-			            	flex: 1
-			            	
+							xtype:'container',
+							layout:'hbox',
+							margin: '0 0 0 33',
+							items:[
+								{
+					            	xtype: 'competitorchart',
+					            	flex: 1
+					            },
+								{
+									xtype:'label',
+									margin: '100 0 0 27',
+									html: '<font size="5" face="verdana" color="black"><b>Competitors Pricing</b></font>',
+									flex : 1
+								}
+							]
 			            }
 			     ]
 			  },
 			  {
 			   xtype: 'panel',
 			   region: 'south',
-			   html: '<body bgcolor="#E6E6FA"><font size="4" face="verdana" color="black"><b>Verizon Copy Right</b></font><img align="right" src="images/verizonlogo.jpeg" alt="Verizon" height="50" width="150"></body>',
+			   bodyStyle: 'background:#DCDCDC; padding:10px;',
+			   html: '<body bgcolor="#E6E6FA"><font size="2" face="verdana" color="black"><b>Proprietary and Confidential. Not for disclosure outside of Verizon</b></font><img align="right" src="images/verizonlogo.jpeg" alt="Verizon" height="50" width="150"></body>',
 			   height: 50
 			  }
 

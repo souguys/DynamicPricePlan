@@ -4,7 +4,7 @@ Ext.define('Verizon.view.home.ComparePricePlanContainer', {
 	alias: 'widget.comparepriceplancontainer',
 	autoShow: true,
 	layout: 'fit',
-	title: 'Price Plan',
+	title: 'Current Vs Proposed Comparsion',
     height: 500,
     width: 700,
     bbar: ['-',{
