@@ -4,7 +4,7 @@ Ext.define("Verizon.controller.LoginController",{
 	models:[],
 	stores:[],
 	refs:[
-	      {ref:"userName",  selector:"#name"},
+	      {ref:"userName",  selector:"textfield [id=login_user]"},
 	      {ref:"passWord", selector:"#pass"}
 	      ],     
 
@@ -22,6 +22,15 @@ Ext.define("Verizon.controller.LoginController",{
 	},
 	clicked:function(){
 		console.log("panel renderss");
-		window.open("Graph.html","_self");
+		if(Ext.getCmp('login_user').value == 'admin' && Ext.getCmp('login_password').value == 'admin'){
+			window.open("Graph.html","_self");
+		}else{
+			Ext.Msg.show({
+			     title:'Bad Credentials',
+			     msg: 'Invalid Credentials',
+			     buttons: Ext.MessageBox.OK,
+			     icon: Ext.Msg.ERROR
+			});
+		}
 	}
 });
