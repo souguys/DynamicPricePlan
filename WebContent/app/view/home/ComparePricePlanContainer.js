@@ -8,9 +8,11 @@ Ext.define('Verizon.view.home.ComparePricePlanContainer', {
     height: 500,
     width: 700,
     bbar: ['-',{
-        text: 'Apply Changes'
+        text: 'Apply Changes',
+        action: 'applychanges'
     }, '-',{
-        text: 'Cancel'
+        text: 'Cancel',
+        action: 'cancel'
     }],
     items:[
 	       {

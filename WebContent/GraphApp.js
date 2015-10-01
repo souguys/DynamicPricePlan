@@ -53,6 +53,33 @@ Ext.application({
 			        	        	 flex: .25
 			        	         }
 			        	        ]
+			          },
+			          {
+			        	   
+			        	   xtype:'container',
+			        	   height: 10
+			           },
+			          {
+			        	  xtype: 'container',
+			        	  height: 40,
+			        	  layout: 'hbox',
+			        	  items: [
+			        	         {
+			        	        	 xtype: 'container',
+			        	        	 width: 20
+			        	         },
+			        	         {
+			        	        	 xtype: 'button',
+			        	        	 action: 'storeappbutton',
+			        	        	 flex: .5,
+			        	        	 width: 50,
+			        	        	 text: '<b>Store App</b>'
+			        	         },
+			        	         {
+			        	        	 xtype: 'container',
+			        	        	 flex: .25
+			        	         }
+			        	        ]
 			          }
 			        ]
 

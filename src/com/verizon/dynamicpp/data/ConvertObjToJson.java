@@ -196,6 +196,7 @@ public class ConvertObjToJson {
 		CompetitorPricePlanObject competitorPricePlanObject = gson.fromJson("{list:"+markDataJsonString+"}", CompetitorPricePlanObject.class);
 		List<CompetitorPricePlanObject> marketPriceList = competitorPricePlanObject.getList();
 		List<PricePlanObject> proposedList = new ArrayList<PricePlanObject>();
+		List<PricePlanObject> newVerizonList = new ArrayList<PricePlanObject>();
 		PricePlanObject newplan = null;
 		PricePlanObject proposed = null;
 		int i=0;
@@ -228,18 +229,24 @@ public class ConvertObjToJson {
 			}
 			else{
 				newplan.setName("XL");
-				int avg = (Integer.parseInt(planObj.getAtt())+Integer.parseInt(planObj.getSprint())+Integer.parseInt(planObj.getTmobile()))/3;
+				int avg = getAvg(Integer.parseInt(planObj.getAtt()),Integer.parseInt(planObj.getSprint()),Integer.parseInt(planObj.getTmobile()));
+				//int avg = (Integer.parseInt(planObj.getAtt())+Integer.parseInt(planObj.getSprint())+Integer.parseInt(planObj.getTmobile()))/3;
 				newplan.setData(avg+"");
 				proposed.setName("XL");
 				proposed.setData1(getVerizonCurrentDataAsMap().get(planObj.getPlansize()));
 				proposed.setData2(avg+"");
 			}
 			proposedList.add(proposed);
+			newVerizonList.add(newplan);
 		}
-		//return "{\"proposedList\":"+gson.toJson(proposedList)+",\"currentMarketList\":"+markDataJsonString+"}";
-		return "{data:"+gson.toJson(proposedList)+"}";
+		return "{\"proposedList\":"+gson.toJson(proposedList)+",\"currentMarketList\":"+markDataJsonString+",\"proposedData\":"+gson.toJson(newVerizonList)+"}";
+		//return "{data:"+gson.toJson(proposedList)+"}";
 	}
 	
+	public int getAvg(int attPrice, int sprintPrice, int tmobilePrice) {
+		return (attPrice+sprintPrice+tmobilePrice)/3;
+	}
+
 	public String getCompetitorPlan(){
 		return "S,M,L,XL";
 	}
